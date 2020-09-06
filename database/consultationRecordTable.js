@@ -45,7 +45,6 @@ consultationRecordTable.all = () => {
 
 consultationRecordTable.byClinic = (req) => {
     sql = mysql.format('SELECT * FROM ' + tableName + ' WHERE clinic = ? ORDER BY `date` DESC', [req.params.clinic]);
-    console.log(sql);
     return new Promise((resolve, reject) => {
         mysqlPool.query(sql, (err, results) => {
             if (err){
