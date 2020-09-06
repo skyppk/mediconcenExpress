@@ -45,7 +45,8 @@ oauth2.createToken = (req, callback) => {
         expires_in: (Date.parse(new Date()) / 1000) + conf.increaseTime,
         // scope: req.results,
         info: {
-            email: req.results[0].email
+            email: req.results[0].email,
+            clinic: req.results[0].clinic
         }
     });
 }

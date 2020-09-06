@@ -14,6 +14,10 @@ router.get('/', async function(req, res, next) {
     }
 });
 
+router.get('/createTable', function(req, res, next) {
+    res.send(consulationRecord.createTable());
+});
+
 router.get('/:clinic', async function(req, res, next) {
     try{
         let results = await consulationRecord.byClinic(req);
@@ -37,9 +41,7 @@ router.post('/', async function (req, res,  next){
     }
 });
 
-router.get('/createTable', function(req, res, next) {
-    res.send(consulationRecord.createTable());
-});
+
 
 
 

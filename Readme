@@ -1,0 +1,14 @@
+database config.js is for declare the which database you want to connect
+you need to change the config first
+
+domain = localhost:3000
+change your domain
+
+using x-www-form-urlencoded
+
+post http://domain/oauth2/token   login to get token {grant_type: password, email: your email, password: your password}
+post http://domain/oauth2/register register
+
+post http://domain/consultationRecord for create record
+
+get http://domain/consultationRecord/{input your clinic name} search by clinic name

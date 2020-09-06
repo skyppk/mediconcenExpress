@@ -18,9 +18,8 @@ consultationRecordTable.createTable = () => {
         '`medication` NVARCHAR(255) NOT NULL,' +
         '`fee` INT NOT NULL,' +
         '`date` DATETIME NOT NULL,' +
-        '`followup` TINYINT NULL DEFAULT 0,' +
-        'PRIMARY KEY (`id`),' +
-        'FOREIGN KEY (`clinic`) REFERENCES `clinic_users` (`clinic`));');
+        '`followup` TEXT(255) NULL,' +
+        'PRIMARY KEY (`id`));');
     return new Promise((resolve, reject) => {
         mysqlPool.query(sql, (err, results) => {
                 if (err) {
@@ -32,7 +31,7 @@ consultationRecordTable.createTable = () => {
 }
 
 consultationRecordTable.all = () => {
-    sql = 'SELECT * FROM ' + tableName;
+    sql = 'SELECT * FROM ' + tableName + ' ORDER BY `date` DESC';
     return new Promise((resolve, reject) => {
        mysqlPool.query(sql, (err, results) => {
            if (err){
@@ -45,7 +44,7 @@ consultationRecordTable.all = () => {
 }
 
 consultationRecordTable.byClinic = (req) => {
-    sql = mysql.format('SELECT * FROM ' + tableName + ' WHERE clinic = ?', [req.params.clinic]);
+    sql = mysql.format('SELECT * FROM ' + tableName + ' WHERE clinic = ? ORDER BY `date` DESC', [req.params.clinic]);
     console.log(sql);
     return new Promise((resolve, reject) => {
         mysqlPool.query(sql, (err, results) => {
