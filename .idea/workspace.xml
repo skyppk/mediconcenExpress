@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ef5cc20-da16-48d0-a3d8-ae12e058c4b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/consultationRecordTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/consultationRecordTable.js" afterDir="false" />
-    </list>
+    <list default="true" id="9ef5cc20-da16-48d0-a3d8-ae12e058c4b8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,7 +55,7 @@
       <workItem from="1599041640108" duration="18253000" />
       <workItem from="1599136858987" duration="747000" />
       <workItem from="1599153552211" duration="2603000" />
-      <workItem from="1599325759523" duration="3668000" />
+      <workItem from="1599325759523" duration="3872000" />
     </task>
     <servers />
   </component>
